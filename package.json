@@ -1,0 +1,25 @@
+{
+  "name": "vouch-platform",
+  "version": "1.0.0",
+  "description": "Vouch - Guaranteed resale platform for high-value branded items",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install && cd backend && npm install && cd ../web && npm install && cd ../mobile && npm install",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:web": "cd web && npm run dev",
+    "dev:mobile": "cd mobile && npm start",
+    "build": "cd backend && npm run build && cd ../web && npm run build",
+    "test": "cd backend && npm test && cd ../web && npm test"
+  },
+  "keywords": ["resale", "authentication", "escrow", "marketplace"],
+  "author": "Vouch Team",
+  "license": "MIT",
+  "workspaces": [
+    "backend",
+    "web",
+    "mobile"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
